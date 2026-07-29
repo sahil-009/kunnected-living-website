@@ -23,11 +23,21 @@ export default defineConfig(async ({ command }) => {
   if (command === "build") {
     try {
       const { nitro } = await import("nitro/vite");
-      plugins.push(
-        nitro({
-          defaultPreset: "cloudflare-module",
-        })
-      );
+      const nitroPlugins = nitro({
+        defaultPreset: "cloudflare-module",
+      });
+      // Patch nitro plugins to prevent "TypeError: Cannot read properties of undefined (reading 'meta')" in Vite 6 config hook
+      const patched = (Array.isArray(nitroPlugins) ? nitroPlugins : [nitroPlugins]).map((plugin: any) => {
+        if (plugin && typeof plugin === "object" && typeof plugin.config === "function") {
+          const originalConfig = plugin.config;
+          plugin.config = function (this: any, ...args: any[]) {
+            const context = this || { meta: {} };
+            return originalConfig.apply(context, args);
+          };
+        }
+        return plugin;
+      });
+      plugins.push(...patched);
     } catch (e) {
       console.warn("Could not load nitro plugin:", e);
     }
