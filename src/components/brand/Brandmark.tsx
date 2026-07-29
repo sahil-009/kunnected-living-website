@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import kuLogo from "@/assets/ku-gpt.png";
 
 /**
  * Typographic stand-in for the KUnnected FM lockup.
@@ -15,7 +16,7 @@ export function Brandmark({
   const ink = tone === "invert" ? "text-white" : "text-core";
   return (
     <span className={cn("inline-flex items-center gap-2.5 select-none", ink, className)}>
-      <ArcMark className="h-7 w-7 shrink-0" />
+      <ArcMark className="h-7 w-7 shrink-0" tone={tone} />
       <span className="font-display text-[1.0625rem] leading-none font-medium tracking-[-0.02em] whitespace-nowrap">
         KUnnected
         <span className="ml-1 font-normal opacity-60">FM</span>
@@ -25,24 +26,19 @@ export function Brandmark({
 }
 
 /** The KUnnect icon geometry: interlocking arcs = connection, flow, integrated systems. */
-export function ArcMark({ className }: { className?: string }) {
+export function ArcMark({
+  className,
+  tone = "core",
+}: {
+  className?: string;
+  tone?: "core" | "invert";
+}) {
   return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" className={className}>
-      <path
-        d="M24 4a20 20 0 0 1 0 40"
-        stroke="currentColor"
-        strokeWidth="5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M24 14a10 10 0 0 0 0 20"
-        stroke="currentColor"
-        strokeWidth="5"
-        strokeLinecap="round"
-        opacity="0.55"
-      />
-      <circle cx="24" cy="24" r="2.6" fill="currentColor" />
-    </svg>
+    <img
+      src={kuLogo}
+      alt="Kunnected Logo"
+      className={cn(className, tone === "invert" && "brightness-0 invert")}
+    />
   );
 }
 
