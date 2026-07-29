@@ -1,8 +1,8 @@
 import { Reveal, Parallax } from "@/components/motion/Reveal";
 import { Counter } from "@/components/motion/Counter";
 import { ArcPattern } from "@/components/brand/Brandmark";
-import controlAsset from "@/assets/control-room.jpg.asset.json";
-import studentAsset from "@/assets/student-living.jpg.asset.json";
+import controlAsset from "@/assets/control-room.jpg";
+import studentAsset from "@/assets/student-living.jpg";
 
 const chips = [
   { label: "Response target", value: "< 30 min" },
@@ -50,7 +50,7 @@ export function Excellence() {
           <div className="aspect-[4/3] w-full overflow-hidden lg:aspect-[3/4]">
             <Parallax distance={36} className="h-full w-full">
               <img
-                src={controlAsset.url}
+                src={controlAsset}
                 alt="Operators monitoring building management dashboards in a control room at night"
                 width={1600}
                 height={1008}
@@ -73,7 +73,7 @@ export function CampusExperience() {
           <div className="aspect-[16/11] w-full overflow-hidden bg-surface">
             <Parallax distance={30} className="h-full w-full">
               <img
-                src={studentAsset.url}
+                src={studentAsset}
                 alt="Students studying in a warm, well-maintained residence common room"
                 width={1408}
                 height={1008}

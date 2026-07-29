@@ -5,8 +5,8 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Counter } from "@/components/motion/Counter";
 import { ArcPattern } from "@/components/brand/Brandmark";
 import { company } from "@/lib/site";
-import caseAsset from "@/assets/case-study.jpg.asset.json";
-import sustainabilityAsset from "@/assets/sustainability.jpg.asset.json";
+import caseAsset from "@/assets/case-study.jpg";
+import sustainabilityAsset from "@/assets/sustainability.jpg";
 
 export function CaseStudy() {
   return (
@@ -18,7 +18,7 @@ export function CaseStudy() {
         <a href="#contact" className="group mt-10 block">
           <div className="aspect-[21/10] w-full overflow-hidden bg-surface">
             <img
-              src={caseAsset.url}
+              src={caseAsset}
               alt="A modern university residence building lit from within at blue hour"
               width={1600}
               height={1000}
@@ -94,7 +94,7 @@ export function Sustainability() {
         <Reveal delay={0.1} className="lg:self-end">
           <div className="aspect-[5/4] w-full overflow-hidden bg-background">
             <img
-              src={sustainabilityAsset.url}
+              src={sustainabilityAsset}
               alt="Solar panels on the roof of a modern campus building"
               width={1400}
               height={1000}

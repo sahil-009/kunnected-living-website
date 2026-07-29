@@ -1,6 +1,6 @@
 import { Reveal, Parallax } from "@/components/motion/Reveal";
 import { foundations, values, company } from "@/lib/site";
-import studentAsset from "@/assets/student-living.jpg.asset.json";
+import studentAsset from "@/assets/student-living.jpg";
 
 export function WhoWeAre() {
   return (
@@ -23,7 +23,7 @@ export function WhoWeAre() {
             <div className="mt-10 aspect-[4/5] w-full overflow-hidden bg-surface lg:max-w-sm">
               <Parallax distance={34} className="h-full w-full">
                 <img
-                  src={studentAsset.url}
+                  src={studentAsset}
                   alt="A bright student accommodation lounge with natural light"
                   width={1408}
                   height={1008}

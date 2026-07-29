@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { services, industries } from "@/lib/site";
-import engineerAsset from "@/assets/engineer.jpg.asset.json";
+import engineerAsset from "@/assets/engineer.jpg";
 
 export function Services() {
   return (
@@ -61,7 +61,7 @@ export function Industries() {
   return (
     <section id="industries" className="relative overflow-hidden bg-core">
       <img
-        src={engineerAsset.url}
+        src={engineerAsset}
         alt=""
         aria-hidden="true"
         width={1400}

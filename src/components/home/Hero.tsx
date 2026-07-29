@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
-import heroAsset from "@/assets/hero-campus.jpg.asset.json";
+import heroAsset from "@/assets/hero-campus.jpg";
 import { ArcPattern } from "@/components/brand/Brandmark";
 import { LineReveal } from "@/components/motion/Reveal";
 import { company } from "@/lib/site";
@@ -15,7 +15,7 @@ export function Hero() {
     <section id="top" className="relative h-dvh min-h-[42rem] w-full overflow-hidden bg-core">
       <motion.div style={reduced ? undefined : { y }} className="absolute inset-0 h-[118%]">
         <img
-          src={heroAsset.url}
+          src={heroAsset}
           alt="A modern university campus at golden hour with a long reflecting pool"
           width={1920}
           height={1088}

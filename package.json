@@ -7,7 +7,7 @@
     "unplugin": "1.10.0"
   },
   "scripts": {
-    "dev": "vite dev",
+    "dev": "node -e \"const { execSync } = require('child_process'); try { execSync('bun --version', { stdio: 'ignore' }); execSync('bun x --bun vite dev', { stdio: 'inherit' }); } catch { execSync('vite dev', { stdio: 'inherit' }); }\"",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
@@ -85,6 +85,6 @@
     "prettier": "^3.7.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.56.1",
-    "vite": "^6.2.0"
+    "vite": "^8.0.16"
   }
 }
