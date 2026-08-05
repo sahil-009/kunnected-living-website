@@ -2,17 +2,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Search, X, Menu, ArrowUpRight } from "lucide-react";
 import { Brandmark } from "@/components/brand/Brandmark";
-import { services } from "@/lib/site";
+import { navigation, services } from "@/lib/site";
 import { cn } from "@/lib/utils";
-
-const links = [
-  { label: "About", href: "#who-we-are" },
-  { label: "Services", href: "#services", mega: true },
-  { label: "Industries", href: "#industries" },
-  { label: "Excellence", href: "#excellence" },
-  { label: "Sustainability", href: "#sustainability" },
-  { label: "Insights", href: "#insights" },
-];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,30 +32,27 @@ export function Nav() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow] duration-500",
           solid
-            ? "border-b border-hairline bg-background/95 backdrop-blur-xl"
+            ? "border-b border-hairline bg-background/90 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent",
         )}
         onMouseLeave={() => setMega(false)}
       >
         <div className="shell flex h-20 items-center justify-between gap-6">
           <a href="#top" aria-label="Kunnected FM home" className="shrink-0">
-            <Brandmark tone={solid ? "core" : "invert"} />
+            <Brandmark tone="invert" />
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
-            {links.map((l) => (
+            {navigation.map((l) => (
               <a
                 key={l.label}
                 href={l.href}
-                onMouseEnter={() => setMega(Boolean(l.mega))}
-                onFocus={() => setMega(Boolean(l.mega))}
-                className={cn(
-                  "relative py-2 text-[0.8125rem] font-medium tracking-tight transition-colors",
-                  solid ? "text-core/70 hover:text-core" : "text-white/75 hover:text-white",
-                )}
+                onMouseEnter={() => setMega(Boolean("mega" in l && l.mega))}
+                onFocus={() => setMega(Boolean("mega" in l && l.mega))}
+                className="relative py-2 text-[0.9375rem] font-medium tracking-tight text-white/85 transition-colors hover:text-active"
               >
                 {l.label}
-                {l.mega && mega && (
+                {"mega" in l && l.mega && mega && (
                   <motion.span
                     layoutId="nav-underline"
                     className="absolute inset-x-0 -bottom-px h-px bg-active"
@@ -80,40 +68,23 @@ export function Nav() {
               aria-label="Search the site"
               className={cn(
                 "hidden h-11 w-11 items-center justify-center rounded-full transition-colors sm:inline-flex",
-                solid ? "text-core hover:bg-surface" : "text-white hover:bg-white/10",
+                solid ? "text-white hover:bg-white/10" : "text-white hover:bg-white/10",
               )}
             >
               <Search className="h-[1.05rem] w-[1.05rem]" />
             </button>
 
-            <a
-              href="#contact"
-              className={cn(
-                "group hidden items-center gap-2 rounded-full px-5 py-3 text-[0.8125rem] font-medium tracking-tight transition-all sm:inline-flex",
-                solid
-                  ? "bg-core text-white hover:bg-active"
-                  : "glass-cta text-white hover:bg-white/20",
-              )}
-            >
-              Request Consultation
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
-
             <button
               type="button"
               aria-label="Open menu"
               onClick={() => setMobile(true)}
-              className={cn(
-                "inline-flex h-11 w-11 items-center justify-center rounded-full lg:hidden",
-                solid ? "text-core" : "text-white",
-              )}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white lg:hidden"
             >
               <Menu className="h-5 w-5" />
             </button>
           </div>
         </div>
 
-        {/* Services mega menu */}
         <AnimatePresence>
           {mega && (
             <motion.div
@@ -121,7 +92,7 @@ export function Nav() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden border-t border-hairline bg-background lg:block"
+              className="hidden border-t border-hairline bg-[#121217] lg:block"
             >
               <div className="shell grid grid-cols-[1.6fr_1fr] gap-16 py-12">
                 <div>
@@ -131,7 +102,7 @@ export function Nav() {
                       <li key={s.slug}>
                         <a
                           href="#services"
-                          className="group flex items-baseline justify-between gap-3 border-b border-hairline py-3 text-sm text-core/80 transition-colors hover:text-active"
+                          className="group flex items-baseline justify-between gap-3 border-b border-hairline py-3 text-base text-white/85 transition-colors hover:text-active"
                         >
                           {s.title}
                           <ArrowUpRight className="h-3.5 w-3.5 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -140,18 +111,18 @@ export function Nav() {
                     ))}
                   </ul>
                 </div>
-                <div className="bg-core p-8 text-white">
-                  <p className="eyebrow text-white/55">Always on</p>
-                  <p className="mt-6 font-display text-2xl leading-tight font-medium tracking-tight">
+                <div className="bg-[#16161c] border border-hairline p-8 text-white">
+                  <p className="eyebrow text-white/60">Always on</p>
+                  <p className="mt-6 font-display text-2xl leading-tight font-semibold tracking-tight">
                     A 24/7 operations desk sits behind every service line.
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-white/65">
+                  <p className="mt-4 text-base leading-relaxed text-white/75">
                     One helpdesk, one escalation path, one accountable team across the entire
                     campus estate.
                   </p>
                   <a
-                    href="#excellence"
-                    className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-white underline-offset-4 hover:underline"
+                    href="#process"
+                    className="mt-8 inline-flex items-center gap-2 text-base font-medium text-white hover:text-active underline underline-offset-4"
                   >
                     How we operate <ArrowUpRight className="h-4 w-4" />
                   </a>
@@ -162,7 +133,6 @@ export function Nav() {
         </AnimatePresence>
       </header>
 
-      {/* Mobile navigation */}
       <AnimatePresence>
         {mobile && (
           <motion.div
@@ -170,7 +140,7 @@ export function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 bg-core text-white lg:hidden overflow-y-auto"
+            className="fixed inset-0 z-50 overflow-y-auto bg-background text-white lg:hidden"
           >
             <div className="shell flex h-20 items-center justify-between">
               <Brandmark tone="invert" />
@@ -178,13 +148,13 @@ export function Nav() {
                 type="button"
                 aria-label="Close menu"
                 onClick={() => setMobile(false)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white hover:text-active"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
             <nav aria-label="Mobile" className="shell mt-6 flex flex-col pb-10">
-              {[...links, { label: "Contact", href: "#contact" }].map((l, i) => (
+              {navigation.map((l, i) => (
                 <motion.a
                   key={l.label}
                   href={l.href}
@@ -192,7 +162,7 @@ export function Nav() {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.06 * i, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="border-b border-white/15 py-5 font-display text-3xl font-medium tracking-tight"
+                  className="border-b border-white/15 py-5 font-display text-3xl font-semibold tracking-tight hover:text-active transition-colors"
                 >
                   {l.label}
                 </motion.a>

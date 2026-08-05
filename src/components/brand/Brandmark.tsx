@@ -2,9 +2,8 @@ import { cn } from "@/lib/utils";
 import kuLogo from "@/assets/ku-gpt.png";
 
 /**
- * Typographic stand-in for the KUnnected FM lockup.
- * Swap the mark + wordmark here when the licensed artwork arrives —
- * clearspace and the 180px minimum digital width are already honoured.
+ * KUnnected FM brand lockup using approved logo artwork.
+ * White-background variant preferred per client brief.
  */
 export function Brandmark({
   className,
@@ -13,13 +12,19 @@ export function Brandmark({
   className?: string;
   tone?: "core" | "invert";
 }) {
-  const ink = tone === "invert" ? "text-white" : "text-core";
   return (
-    <span className={cn("inline-flex items-center gap-2.5 select-none", ink, className)}>
-      <ArcMark className="h-7 w-7 shrink-0" tone={tone} />
-      <span className="font-display text-[1.0625rem] leading-none font-medium tracking-[-0.02em] whitespace-nowrap">
+    <span className={cn("inline-flex items-center gap-3 select-none", className)}>
+      <ArcMark className="h-9 w-auto min-w-[2.25rem] shrink-0" tone={tone} />
+      <span
+        className={cn(
+          "font-display text-[1.125rem] leading-none font-semibold tracking-[-0.02em] whitespace-nowrap",
+          tone === "invert" ? "text-white" : "text-core",
+        )}
+      >
         KUnnected
-        <span className="ml-1 font-normal opacity-60">FM</span>
+        <span className={cn("ml-1 font-normal", tone === "invert" ? "text-white/70" : "text-core/60")}>
+          FM
+        </span>
       </span>
     </span>
   );
@@ -36,8 +41,14 @@ export function ArcMark({
   return (
     <img
       src={kuLogo}
-      alt="Kunnected Logo"
-      className={cn(className, tone === "invert" && "brightness-0 invert")}
+      alt="Kunnected FM logo"
+      width={180}
+      height={48}
+      className={cn(
+        "h-9 w-auto object-contain",
+        tone === "invert" && "brightness-0 invert",
+        className,
+      )}
     />
   );
 }

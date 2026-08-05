@@ -1,22 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { Hero } from "@/components/home/Hero";
+import { Hero, ClientLogos } from "@/components/home/Hero";
 import { WhoWeAre, WhyChooseUs } from "@/components/home/WhoWeAre";
 import { Services, Industries } from "@/components/home/Services";
-import { Excellence, CampusExperience, Stats } from "@/components/home/Excellence";
-import {
-  CaseStudy,
-  Sustainability,
-  Testimonials,
-  Insights,
-  CtaBand,
-} from "@/components/home/Sections";
+import { Stats } from "@/components/home/Stats";
+import { Methodology } from "@/components/home/Methodology";
+import { CaseStudy, Testimonials, CtaBand } from "@/components/home/Sections";
+import { Faq } from "@/components/home/Faq";
 import { company } from "@/lib/site";
 
-const title = "Kunnected FM — Campus Facilities Management, Abu Dhabi";
+const title = "Kunnected FM — Smarter Campus Operations, Abu Dhabi";
 const description =
-  "Integrated facilities management for universities and student accommodation: HVAC, cleaning, electrical, fire safety and 24/7 maintenance across the campus estate.";
+  "Student-facing facilities management for universities and accommodation: HVAC, cleaning, electrical, fire safety and 24/7 maintenance across the campus estate in Abu Dhabi.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,17 +57,16 @@ function Index() {
       <Nav />
       <main>
         <Hero />
+        <ClientLogos />
         <WhoWeAre />
-        <WhyChooseUs />
-        <Services />
-        <Industries />
-        <Excellence />
-        <CampusExperience />
         <Stats />
+        <Services />
+        <Methodology />
+        <WhyChooseUs />
         <CaseStudy />
-        <Sustainability />
+        <Industries />
         <Testimonials />
-        <Insights />
+        <Faq />
         <CtaBand />
       </main>
       <Footer />

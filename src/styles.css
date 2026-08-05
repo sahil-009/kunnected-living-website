@@ -24,7 +24,7 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --font-display: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Outfit", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --color-core: var(--core);
@@ -67,80 +67,81 @@
 :root {
   --radius: 0.375rem;
 
-  /* Brand constants */
-  --core: #201a57;
+  /* Brand constants - Locked to BRAND_BOOK_KUFM.pdf */
+  --core: #201A57;       /* Core Blue */
   --core-foreground: #ffffff;
-  --active: #3f80cf;
+  --active: #3F80CF;     /* Active Blue */
   --active-foreground: #ffffff;
 
-  --background: #ffffff;
-  --foreground: #201a57;
-  --surface: #f6f7fa;
-  --hairline: rgb(32 26 87 / 0.12);
+  --background: #201A57; /* Core Blue Background */
+  --foreground: #ffffff; /* Bright White */
+  --surface: #14103b;    /* Deeper Core Blue shade for card surface */
+  --hairline: rgba(63, 128, 207, 0.22); /* Thin active blue border */
 
-  --card: #ffffff;
-  --card-foreground: #201a57;
-  --popover: #ffffff;
-  --popover-foreground: #201a57;
-  --primary: #201a57;
+  --card: #14103b;
+  --card-foreground: #ffffff;
+  --popover: #14103b;
+  --popover-foreground: #ffffff;
+  --primary: #3F80CF;
   --primary-foreground: #ffffff;
-  --secondary: #f6f7fa;
-  --secondary-foreground: #201a57;
-  --muted: #f6f7fa;
-  --muted-foreground: #565656;
-  --accent: #3f80cf;
+  --secondary: #1a154c;
+  --secondary-foreground: #ffffff;
+  --muted: #1a154c;
+  --muted-foreground: #a6adce;
+  --accent: #3F80CF;
   --accent-foreground: #ffffff;
-  --destructive: #565656;
+  --destructive: #a6adce;
   --destructive-foreground: #ffffff;
-  --border: rgb(32 26 87 / 0.12);
-  --input: rgb(32 26 87 / 0.16);
-  --ring: #3f80cf;
-  --sidebar: #f6f7fa;
-  --sidebar-foreground: #201a57;
-  --sidebar-primary: #201a57;
+  --border: rgba(63, 128, 207, 0.22);
+  --input: rgba(63, 128, 207, 0.3);
+  --ring: #3F80CF;
+  --sidebar: #14103b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #3F80CF;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ffffff;
-  --sidebar-accent-foreground: #201a57;
-  --sidebar-border: rgb(32 26 87 / 0.12);
-  --sidebar-ring: #3f80cf;
+  --sidebar-accent: #1a154c;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(63, 128, 207, 0.22);
+  --sidebar-ring: #3F80CF;
 }
 
 .dark {
-  --background: #0f0c2b;
+  /* Mirror parameters to prevent flashes */
+  --background: #201A57;
   --foreground: #ffffff;
-  --surface: #17133c;
-  --hairline: rgb(255 255 255 / 0.14);
+  --surface: #14103b;
+  --hairline: rgba(63, 128, 207, 0.22);
 
-  --core: #ffffff;
-  --core-foreground: #201a57;
-  --active: #6fa4e2;
-  --active-foreground: #0f0c2b;
+  --core: #201A57;
+  --core-foreground: #ffffff;
+  --active: #3F80CF;
+  --active-foreground: #ffffff;
 
-  --card: #17133c;
+  --card: #14103b;
   --card-foreground: #ffffff;
-  --popover: #17133c;
+  --popover: #14103b;
   --popover-foreground: #ffffff;
-  --primary: #ffffff;
-  --primary-foreground: #201a57;
-  --secondary: #17133c;
+  --primary: #3F80CF;
+  --primary-foreground: #ffffff;
+  --secondary: #1a154c;
   --secondary-foreground: #ffffff;
-  --muted: #17133c;
-  --muted-foreground: #b7b9c9;
-  --accent: #6fa4e2;
-  --accent-foreground: #0f0c2b;
-  --destructive: #b7b9c9;
-  --destructive-foreground: #0f0c2b;
-  --border: rgb(255 255 255 / 0.14);
-  --input: rgb(255 255 255 / 0.2);
-  --ring: #6fa4e2;
-  --sidebar: #17133c;
+  --muted: #1a154c;
+  --muted-foreground: #a6adce;
+  --accent: #3F80CF;
+  --accent-foreground: #ffffff;
+  --destructive: #a6adce;
+  --destructive-foreground: #ffffff;
+  --border: rgba(63, 128, 207, 0.22);
+  --input: rgba(63, 128, 207, 0.3);
+  --ring: #3F80CF;
+  --sidebar: #14103b;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #201a57;
-  --sidebar-accent: #0f0c2b;
+  --sidebar-primary: #3F80CF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1a154c;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgb(255 255 255 / 0.14);
-  --sidebar-ring: #6fa4e2;
+  --sidebar-border: rgba(63, 128, 207, 0.22);
+  --sidebar-ring: #3F80CF;
 }
 
 @layer base {
@@ -157,6 +158,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
     font-synthesis-weight: none;
   }
 
@@ -165,14 +168,15 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.028em;
     text-wrap: balance;
+    color: #ffffff;
   }
 
   ::selection {
-    background: var(--core);
-    color: #ffffff;
+    background: var(--active);
+    color: #08080a;
   }
 
   :focus-visible {
@@ -226,7 +230,7 @@
 
 @utility display-xl {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 0.95;
   font-size: clamp(2.75rem, 7.2vw, 7rem);
@@ -234,7 +238,7 @@
 
 @utility display-lg {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.032em;
   line-height: 1;
   font-size: clamp(2.25rem, 4.6vw, 4.25rem);
@@ -242,20 +246,120 @@
 
 @utility display-md {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.028em;
   line-height: 1.05;
   font-size: clamp(1.75rem, 3vw, 2.75rem);
 }
 
 @utility lede {
-  font-size: clamp(1.0625rem, 1.35vw, 1.375rem);
-  line-height: 1.55;
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.65;
+  color: var(--foreground);
+}
+
+@utility body-text {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--foreground);
+}
+
+@utility body-secondary {
+  font-size: 1rem;
+  line-height: 1.65;
   color: var(--muted-foreground);
+}
+
+@utility section-underline {
+  display: block;
+  height: 3px;
+  width: 3.5rem;
+  margin-top: 1.25rem;
+  background-color: var(--active);
+  transform-origin: left;
 }
 
 @utility glass-cta {
   backdrop-filter: blur(14px) saturate(140%);
-  background: rgb(255 255 255 / 0.12);
-  border: 1px solid rgb(255 255 255 / 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+@utility ru-image {
+  border-radius: 40px 0px 40px 0px;
+  overflow: hidden;
+}
+
+@utility gold-glow {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-width: 1px;
+  border-color: rgba(63, 128, 207, 0.12);
+  &:hover {
+    border-color: rgba(63, 128, 207, 0.5);
+    box-shadow: 0 0 25px rgba(63, 128, 207, 0.12);
+  }
+}
+
+@utility watermark-bg {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 11rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+  user-select: none;
+  line-height: 0.8;
+  z-index: 0;
+}
+
+@keyframes gradient-xy {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float-1 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.15); }
+  100% { transform: translate(-30px, 90px) scale(0.95); }
+}
+
+@keyframes float-2 {
+  0% { transform: translate(0px, 0px) scale(1.05); }
+  50% { transform: translate(-70px, -30px) scale(0.9); }
+  100% { transform: translate(50px, 70px) scale(1.1); }
+}
+
+@utility bg-light-mesh {
+  background: linear-gradient(-45deg, #ffffff, #f4f7ff, #e9f0ff, #ffffff);
+  background-size: 400% 400%;
+  animation: gradient-xy 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@utility blur-circle-1 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(63, 128, 207, 0.16);
+  filter: blur(80px);
+  animation: float-1 18s infinite alternate;
+}
+
+@utility blur-circle-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(32, 26, 87, 0.09);
+  filter: blur(110px);
+  animation: float-2 22s infinite alternate;
+}
+
