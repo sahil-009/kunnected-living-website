@@ -6,8 +6,10 @@ export function Footer() {
   return (
     <footer className="border-t border-hairline bg-background">
       <div className="shell py-20 lg:py-28">
-        <div className="flex items-start gap-5 border-b border-hairline pb-14">
-          <Brandmark tone="invert" className="scale-125 origin-left" />
+        <div className="flex flex-col gap-8 border-b border-hairline pb-14 md:flex-row md:items-start md:gap-14">
+          <div className="shrink-0 pr-8 md:pr-12">
+            <Brandmark tone="invert" className="scale-125 origin-left" />
+          </div>
           <div className="min-w-0 pt-1">
             <p className="body-secondary max-w-md">{company.legalName}</p>
             <p className="body-text mt-3 max-w-lg text-muted-foreground">{company.tagline}</p>

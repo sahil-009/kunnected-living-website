@@ -2,16 +2,16 @@ export const company = {
   name: "Kunnected FM",
   legalName: "Kunnected Living Facilities Management Services LLC",
   tagline:
-    "To manage student living with professionalism and heart, ensuring comfort, safety, and peace of mind every day.",
-  purpose: "Connected Campus Excellence",
+    "To manage student living at Khalifa University with professionalism and heart, ensuring comfort, safety, and peace of mind every day.",
+  purpose: "Exclusively Serving Khalifa University",
   purposeBody:
     "We operate with a clear purpose — to ensure every space across campus functions seamlessly, efficiently, and reliably. We don't just maintain facilities; we enable experiences.",
   purposeExtended:
     "Through integrated systems, proactive management, and continuous improvement, we create an environment where people can focus, perform, and thrive.",
   headline: "Smarter Campus Operations",
   subheadline:
-    "Integrated systems for efficient, reliable, and connected facility management across the campus estate.",
-  usp: "Student-facing facilities management with 24/7 maintenance, keeping student satisfaction high and parent complaints minimal.",
+    "Integrated systems for efficient, reliable, and connected facility management across the Khalifa University campus estate.",
+  usp: "Student-facing facilities management with 24/7 maintenance, keeping student satisfaction high and parent complaints minimal across Khalifa University residences.",
   address: {
     line1: "Sas Al Nakhl Campus",
     line2: "Abu Dhabi, United Arab Emirates",
@@ -21,7 +21,7 @@ export const company = {
   email: "info@kunnectedfm.ae",
   web: "www.kunnectedfm.ae",
   hours: "Sunday – Thursday, 08:00 – 18:00 · Emergency cover 24/7",
-} as const;
+};
 
 export const vision = [
   "Reliable systems that never miss a beat",
@@ -95,7 +95,7 @@ export const keySkillSets = [
   "Fire safety systems",
 ] as const;
 
-export const targetAudience = ["Universities", "University students"] as const;
+export const targetAudience = ["Khalifa University", "Khalifa University students"] as const;
 
 export const flagshipServices = [
   "Facility Maintenance",
@@ -210,8 +210,7 @@ export const project = {
   title: "Khalifa University Student Accommodation",
   subtitle: "3,260 beds · 8 buildings · Main Campus & Sas Al Nakhl",
   body: "Khalifa University Student Accommodation forms a key part of the university's strategic growth plan, aiming to deliver world-class living facilities for students across both the Main Campus and Sas Al Nakhl (SAN) Campus. With a total capacity of 3,260 beds across eight buildings, the development is designed to foster a vibrant campus life while supporting academic and doctoral pursuits.",
-  scope: "KLFM's scope includes a full range of services such as management operations, QHSE compliance, helpdesk services, soft services (cleaning, pest control, waste management, laundry, landscaping, and security), and hard services (HVAC, plumbing, elevators, and electrical systems). It also covers energy management and lifecycle maintenance. In addition, KLFM provides value-added services including transportation (shuttle) and concierge services, plus Student Welfare Services including room allocation, student induction, key management, and code of conduct monitoring.",
-  completion: "Scheduled for completion December 2026",
+  scope: "KUFM's scope includes a full range of services such as management operations, QHSE compliance, helpdesk services, soft services (cleaning, pest control, waste management, laundry, landscaping, and security), and hard services (HVAC, plumbing, elevators, and electrical systems). It also covers energy management and lifecycle maintenance. In addition, KUFM provides value-added services including transportation (shuttle) and concierge services, plus Student Welfare Services including room allocation, student induction, key management, and code of conduct monitoring.",
 } as const;
 
 export const projectScope = {
@@ -246,44 +245,44 @@ export const projectScope = {
 
 export const faq = [
   {
-    question: "What services do you provide?",
+    question: "What services do you provide at Khalifa University?",
     answer:
-      "We offer complete facilities management solutions, including space planning, HVAC, cleaning, buildings maintenance, electrical fittings and fixtures, project management, preventive maintenance, asset and lifecycle tracking, fire safety systems, and turnkey project execution.",
+      "We offer complete facilities management solutions, including space planning, HVAC, cleaning, buildings maintenance, electrical fittings and fixtures, project management, preventive maintenance, asset and lifecycle tracking, fire safety systems, and student welfare services across Khalifa University campuses.",
   },
   {
-    question: "Can you customize services according to our campus needs?",
+    question: "Which Khalifa University campuses do you support?",
     answer:
-      "Absolutely. Every project is fully customized to match your institution's requirements, space, operational standards, and budget — ensuring a unique and personalized service delivery model.",
+      "We manage and support student accommodation estates across both the Main Campus and Sas Al Nakhl (SAN) Campus in Abu Dhabi.",
   },
   {
-    question: "How do you ensure the quality of your work?",
+    question: "How do you ensure the quality of work on campus?",
     answer:
-      "We use premium-quality materials, skilled craftsmanship, and strict quality checks at every stage to deliver durable and reliable campus operations.",
+      "We use premium-quality materials, skilled craftsmanship, and strict quality checks at every stage to deliver durable, compliant, and reliable campus operations.",
   },
   {
-    question: "Will I receive regular updates during the project?",
+    question: "Are campus operations teams kept informed of progress?",
     answer:
-      "Yes. Our team keeps you informed throughout every phase with regular progress updates, ensuring complete transparency from mobilisation to handover.",
+      "Yes. We maintain complete transparency with Khalifa University's housing and estates teams, providing regular operational updates and compliance reporting.",
   },
   {
-    question: "Do you provide end-to-end turnkey solutions?",
+    question: "Do you provide end-to-end management for student residences?",
     answer:
-      "Yes. We manage the entire project — from assessment and service integration to execution and final handover — providing a hassle-free experience for university estates teams.",
+      "Yes. We manage the entire lifecycle of student living spaces — from mobilisation and room allocation to day-to-day facilities engineering and final room turnover.",
   },
   {
-    question: "How do you handle emergency maintenance?",
+    question: "How is emergency maintenance handled?",
     answer:
-      "Our 24/7 helpdesk provides staffed emergency response with defined escalation paths and resolution commitments — measured, reported, and reviewed continuously.",
+      "Our 24/7 helpdesk provides staffed emergency response specifically for Khalifa University residences, with defined escalation paths and rapid resolution commitments.",
   },
   {
-    question: "Why should I choose Kunnected FM?",
+    question: "What makes Kunnected FM's campus operations unique?",
     answer:
-      "Kunnected FM combines creativity, quality craftsmanship, timely delivery, and personalized service to transform campus operations into beautifully managed living spaces where students thrive.",
+      "Kunnected FM combines proactive facilities engineering, student welfare monitoring, and 24/7 responsiveness to transform student accommodation into comfortable, safe environments where students can thrive.",
   },
 ] as const;
 
 export const industries = [
-  { title: "Universities", body: "Academic buildings, laboratories, libraries and lecture estates." },
+  { title: "Academic & Research", body: "Academic buildings, laboratories, libraries and lecture estates." },
   { title: "Student Accommodation", body: "Residences where uptime is measured in comfort, not tickets." },
   { title: "Campus Infrastructure", body: "Utilities, plant rooms, distribution and shared services." },
   { title: "Sports & Amenity", body: "Gyms, dining halls and social spaces with heavy daily load." },
@@ -294,6 +293,5 @@ export const navigation = [
   { label: "Services", href: "#services", mega: true },
   { label: "Process", href: "#process" },
   { label: "Projects", href: "#projects" },
-  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ] as const;

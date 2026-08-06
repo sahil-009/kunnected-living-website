@@ -64,7 +64,7 @@ export function Services() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="body-secondary max-w-md">
-              We deliver complete facilities management solutions for universities and student
+              We deliver complete facilities management solutions for Khalifa University and its student
               accommodation. Our team combines reliability, functionality, and quality
               craftsmanship to create environments that are safe, practical, and tailored to
               campus life.
@@ -160,12 +160,12 @@ export function Industries() {
       />
       <div className="shell relative py-24 lg:py-32">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">Industries we serve</p>
+          <p className="eyebrow text-muted-foreground">Areas of Campus Operations</p>
           <span className="section-underline mt-5 block" />
         </Reveal>
         <Reveal delay={0.08}>
           <h2 className="display-md mt-8 max-w-[20ch] text-white">
-            Built for universities and the students who live there
+            Built for Khalifa University and the students who live here
           </h2>
         </Reveal>
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

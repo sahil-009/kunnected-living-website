@@ -127,24 +127,6 @@ export function ClientLogos() {
           <div className="h-8 w-px bg-white/10 hidden md:block" />
           <div className="flex flex-col">
             <span className="font-display text-sm font-black tracking-widest text-white">
-              ADEK
-            </span>
-            <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">
-              ABU DHABI
-            </span>
-          </div>
-          <div className="h-8 w-px bg-white/10 hidden md:block" />
-          <div className="flex flex-col">
-            <span className="font-display text-sm font-black tracking-widest text-white">
-              MUBADALA
-            </span>
-            <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">
-              ACADEMICS
-            </span>
-          </div>
-          <div className="h-8 w-px bg-white/10 hidden md:block" />
-          <div className="flex flex-col">
-            <span className="font-display text-sm font-black tracking-widest text-white">
               KU RESIDENCES
             </span>
             <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">

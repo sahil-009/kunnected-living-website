@@ -26,7 +26,7 @@ export function Faq() {
         <Reveal delay={0.12}>
           <p className="lede mt-6 max-w-2xl text-slate-700">
             Clear answers about how Kunnected FM delivers integrated facilities management for
-            universities and student accommodation across Abu Dhabi.
+            student accommodation across Khalifa University.
           </p>
         </Reveal>
 

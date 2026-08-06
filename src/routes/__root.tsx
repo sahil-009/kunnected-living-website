@@ -72,11 +72,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kunnected FM — Campus Facilities Management" },
+      { title: "Kunnected FM — Khalifa University Campus Facilities Management" },
       {
         name: "description",
         content:
-          "Integrated facilities management for universities and student accommodation in Abu Dhabi.",
+          "Dedicated integrated facilities management for Khalifa University student accommodation in Abu Dhabi.",
       },
       { property: "og:site_name", content: "Kunnected FM" },
       { property: "og:type", content: "website" },

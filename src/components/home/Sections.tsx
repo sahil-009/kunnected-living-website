@@ -38,7 +38,6 @@ export function CaseStudy() {
           <Reveal delay={0.16} className="mt-8">
             <p className="eyebrow text-active">{project.subtitle}</p>
             <p className="body-text mt-4 leading-relaxed text-white/80">{project.scope}</p>
-            <p className="mt-4 text-base font-semibold text-active">{project.completion}</p>
           </Reveal>
 
           {/* Operational Scope Grid */}
@@ -154,19 +153,19 @@ const quotes = [
     quote:
       "The difference is that issues get closed, not logged. Our residence team spends its time on students again.",
     name: "Head of Campus Services",
-    org: "University residence portfolio",
+    org: "Khalifa University Residences",
   },
   {
     quote:
       "Mobilisation was the calmest handover we have run. Every asset was on the register before we opened the doors.",
     name: "Estates Director",
-    org: "Higher education client",
+    org: "Khalifa University Student Accommodation",
   },
   {
     quote:
       "Compliance evidence arrives before we ask for it. That alone changed how we plan the academic year.",
     name: "Facilities Manager",
-    org: "Student accommodation operator",
+    org: "Sas Al Nakhl Campus",
   },
 ];
 
@@ -178,14 +177,12 @@ export function Testimonials() {
     <section className="border-t border-hairline bg-background">
       <div className="shell py-24 lg:py-36">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">What our clients say</p>
+          <p className="eyebrow text-muted-foreground">What the University Teams Say</p>
           <SectionUnderline />
         </Reveal>
         <Reveal delay={0.08}>
           <p className="lede mt-8 max-w-2xl">
-            Our clients&apos; satisfaction is at the heart of everything we do. Their feedback
-            reflects our commitment to exceptional facilities management and seamless service
-            delivery.
+            Feedback from the housing administrators, estates directors, and student accommodation teams who experience our operations daily across campuses.
           </p>
         </Reveal>
 
@@ -244,23 +241,6 @@ export function Testimonials() {
 }
 
 export function CtaBand() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [submittedName, setSubmittedName] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (name.trim() && email.trim() && message.trim()) {
-      setSubmittedName(name);
-      setFormSubmitted(true);
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
-  };
-
   return (
     <section id="contact" className="relative overflow-hidden bg-background text-white border-t border-hairline">
       <ArcPattern className="text-[#3F80CF]" opacity={0.06} />
@@ -277,129 +257,78 @@ export function CtaBand() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-14 border-t border-hairline pt-10 lg:grid-cols-2">
+        <div className="mt-14 grid gap-14 border-t border-hairline pt-10 md:grid-cols-2">
           <Reveal delay={0.14}>
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-bold text-white uppercase tracking-wider">Contact Info</h3>
-                <address className="mt-5 space-y-3 text-base not-italic text-muted-foreground">
-                  <p className="leading-relaxed">
-                    <strong>{company.name}</strong>
-                    <br />
-                    {company.address.line1}
-                    <br />
-                    {company.address.line2}
-                  </p>
-                  <p>
+            <div>
+              <h3 className="text-lg font-bold text-white uppercase tracking-wider">Contact Info</h3>
+              <address className="mt-5 space-y-4 text-base not-italic text-muted-foreground">
+                <p className="leading-relaxed">
+                  <strong className="text-white text-lg">{company.name}</strong>
+                  <br />
+                  {company.address.line1}
+                  <br />
+                  {company.address.line2}
+                </p>
+                <div className="space-y-2 pt-4 border-t border-white/5">
+                  <p className="flex items-center gap-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">T:</span>
                     <a href={`tel:${company.tel.replace(/\s/g, "")}`} className="text-white hover:text-active transition-colors">
-                      T: {company.tel}
+                      {company.tel}
                     </a>
                   </p>
-                  <p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">M:</span>
                     <a
                       href={`tel:${company.mobile.replace(/\s/g, "")}`}
                       className="text-white hover:text-active transition-colors"
                     >
-                      M: {company.mobile}
+                      {company.mobile}
                     </a>
                   </p>
-                  <p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">E:</span>
                     <a href={`mailto:${company.email}`} className="text-white hover:text-active transition-colors">
-                      E: {company.email}
+                      {company.email}
                     </a>
                   </p>
-                  <p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">W:</span>
                     <a
                       href={`https://${company.web}`}
                       className="text-white hover:text-active transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      W: {company.web}
+                      {company.web}
                     </a>
                   </p>
-                </address>
-              </div>
-
-              <div className="mt-8 border-t border-white/5 pt-8">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-white/50">Office Hours</h4>
-                <p className="mt-2 text-sm text-muted-foreground">{company.hours}</p>
-              </div>
+                </div>
+              </address>
             </div>
           </Reveal>
 
           <Reveal delay={0.18}>
-            <div>
-              <h3 className="text-lg font-bold text-white uppercase tracking-wider mb-6">Send a Message</h3>
-              {formSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="rounded-xl border border-active/30 bg-[#14103b]/40 p-8 text-center"
-                >
-                  <p className="text-lg font-bold text-active">Message Sent Successfully</p>
-                  <p className="mt-2 text-sm text-white/70">
-                    Thank you, {submittedName || "there"}! We have received your message and our team will get back to you shortly.
-                  </p>
-                  <button
-                    onClick={() => setFormSubmitted(false)}
-                    className="mt-6 text-xs font-semibold text-white underline underline-offset-4 hover:text-active"
-                  >
-                    Send another message
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <label htmlFor="form-name" className="block text-xs font-semibold uppercase tracking-wider text-white/75">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      id="form-name"
-                      required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="e.g. John Doe"
-                      className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-base text-white placeholder-white/20 outline-none transition-all focus:border-active focus:bg-white/10"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="form-email" className="block text-xs font-semibold uppercase tracking-wider text-white/75">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="form-email"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="e.g. john@example.com"
-                      className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-base text-white placeholder-white/20 outline-none transition-all focus:border-active focus:bg-white/10"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="form-message" className="block text-xs font-semibold uppercase tracking-wider text-white/75">
-                      How can we help?
-                    </label>
-                    <textarea
-                      id="form-message"
-                      required
-                      rows={4}
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Describe your facilities management query..."
-                      className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-base text-white placeholder-white/20 outline-none transition-all focus:border-active focus:bg-white/10 resize-none"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-active px-8 py-4 text-base font-semibold text-white transition-all hover:bg-active/90 hover:shadow-[0_0_20px_rgba(63,128,207,0.35)]"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              )}
+            <div className="flex flex-col justify-between h-full bg-[#121217] p-8 rounded-xl border border-hairline gold-glow">
+              <div>
+                <h3 className="text-lg font-bold text-white uppercase tracking-wider">Office Hours &amp; Support</h3>
+                <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+                  Our administrative and management teams are available during standard working hours for support, meetings, and planned maintenance coordination.
+                </p>
+                <div className="mt-6 border-t border-white/5 pt-6">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-white/50">Office Hours</h4>
+                  <p className="mt-2 text-sm text-white/80">{company.hours}</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-active/10 px-3 py-1 text-xs font-semibold text-active">
+                  <span className="h-1.5 w-1.5 rounded-full bg-active animate-pulse" />
+                  24/7 Operations Helpdesk
+                </span>
+                <p className="mt-2.5 text-xs text-muted-foreground">
+                  A staffed helpdesk and emergency response team remains active 24/7/365 to handle any immediate residential or campus infrastructure issues.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>

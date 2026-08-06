@@ -13,20 +13,7 @@ export function Brandmark({
   tone?: "core" | "invert";
 }) {
   return (
-    <span className={cn("inline-flex items-center gap-3 select-none", className)}>
-      <ArcMark className="h-9 w-auto min-w-[2.25rem] shrink-0" tone={tone} />
-      <span
-        className={cn(
-          "font-display text-[1.125rem] leading-none font-semibold tracking-[-0.02em] whitespace-nowrap",
-          tone === "invert" ? "text-white" : "text-core",
-        )}
-      >
-        KUnnected
-        <span className={cn("ml-1 font-normal", tone === "invert" ? "text-white/70" : "text-core/60")}>
-          FM
-        </span>
-      </span>
-    </span>
+    <ArcMark className={className} tone={tone} />
   );
 }
 
