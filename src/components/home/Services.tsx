@@ -8,6 +8,11 @@ import studentAsset from "@/assets/student-living.jpg";
 import hvacAsset from "@/assets/hvac.jpg";
 import electricalAsset from "@/assets/electrical.jpg";
 import caseStudyAsset from "@/assets/case-study.jpg";
+import fireSafetyAsset from "@/assets/fire-safety.png";
+import preventiveMaintenanceAsset from "@/assets/preventive-maintenance.png";
+import assetManagementAsset from "@/assets/asset-management.png";
+import operationsManagementAsset from "@/assets/operations-management.png";
+import emergencyMaintenanceAsset from "@/assets/emergency-maintenance.png";
 import { ArrowUpRight } from "lucide-react";
 
 const serviceImages = {
@@ -17,6 +22,11 @@ const serviceImages = {
   electrical: electricalAsset,
   engineer: engineerAsset,
   "case-study": caseStudyAsset,
+  "fire-safety": fireSafetyAsset,
+  "preventive-maintenance": preventiveMaintenanceAsset,
+  "asset-management": assetManagementAsset,
+  "operations-management": operationsManagementAsset,
+  "emergency-maintenance": emergencyMaintenanceAsset,
 } as const;
 
 const categories = [

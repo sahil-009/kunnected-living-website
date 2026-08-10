@@ -149,19 +149,19 @@ export const services = [
     slug: "fire-safety",
     title: "Fire & Life Safety",
     summary: "Detection, suppression, and evacuation systems held to statutory standard.",
-    imageKey: "control-room" as const,
+    imageKey: "fire-safety" as const,
   },
   {
     slug: "preventive-maintenance",
     title: "Preventive Maintenance",
     summary: "Planned regimes that retire failures before a student ever notices one.",
-    imageKey: "engineer" as const,
+    imageKey: "preventive-maintenance" as const,
   },
   {
     slug: "asset-management",
     title: "Asset Management",
     summary: "Registers, condition data, and lifecycle tracking across the whole estate.",
-    imageKey: "control-room" as const,
+    imageKey: "asset-management" as const,
   },
   {
     slug: "project-management",
@@ -173,13 +173,13 @@ export const services = [
     slug: "operations-management",
     title: "Operations Management",
     summary: "Helpdesk, mobilisation, reporting, and the daily rhythm of a running campus.",
-    imageKey: "control-room" as const,
+    imageKey: "operations-management" as const,
   },
   {
     slug: "emergency-maintenance",
     title: "Emergency Maintenance",
     summary: "24/7 response with defined escalation and resolution commitments.",
-    imageKey: "engineer" as const,
+    imageKey: "emergency-maintenance" as const,
   },
 ] as const;
 
