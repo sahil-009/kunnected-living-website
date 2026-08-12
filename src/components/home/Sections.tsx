@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowLeft, ArrowRight, Star } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star, MapPin, Phone, Smartphone, Mail, Globe } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { ArcPattern } from "@/components/brand/Brandmark";
 import { company, project, projectScope } from "@/lib/site";
@@ -259,51 +259,83 @@ export function CtaBand() {
 
         <div className="mt-14 grid gap-14 border-t border-hairline pt-10 md:grid-cols-2">
           <Reveal delay={0.14}>
-            <div>
-              <h3 className="text-lg font-bold text-white uppercase tracking-wider">Contact Info</h3>
-              <address className="mt-5 space-y-4 text-base not-italic text-muted-foreground">
-                <p className="leading-relaxed">
-                  <strong className="text-white text-lg">{company.name}</strong>
-                  <br />
-                  {company.address.line1}
-                  <br />
-                  {company.address.line2}
-                </p>
-                <div className="space-y-2 pt-4 border-t border-white/5">
-                  <p className="flex items-center gap-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">T:</span>
-                    <a href={`tel:${company.tel.replace(/\s/g, "")}`} className="text-white hover:text-active transition-colors">
-                      {company.tel}
-                    </a>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">M:</span>
-                    <a
-                      href={`tel:${company.mobile.replace(/\s/g, "")}`}
-                      className="text-white hover:text-active transition-colors"
-                    >
-                      {company.mobile}
-                    </a>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">E:</span>
-                    <a href={`mailto:${company.email}`} className="text-white hover:text-active transition-colors">
-                      {company.email}
-                    </a>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-white/50 w-6">W:</span>
-                    <a
-                      href={`https://${company.web}`}
-                      className="text-white hover:text-active transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {company.web}
-                    </a>
-                  </p>
+            <div className="flex flex-col justify-between h-full bg-[#121217] p-8 rounded-xl border border-active/40 shadow-[0_0_30px_rgba(63,128,207,0.15)] transition-all duration-300 hover:border-active hover:shadow-[0_0_40px_rgba(63,128,207,0.25)]">
+              <div>
+                <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-active animate-pulse" />
+                  Contact Info
+                </h3>
+                
+                <div className="mt-6 flex items-start gap-4">
+                  <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-active/10 text-active">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-sm font-semibold text-white">{company.name}</h4>
+                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed not-italic">
+                      {company.address.line1}
+                      <br />
+                      {company.address.line2}
+                    </p>
+                  </div>
                 </div>
-              </address>
+
+                <div className="mt-8 space-y-4 border-t border-white/5 pt-6">
+                  <a 
+                    href={`tel:${company.tel.replace(/\s/g, "")}`} 
+                    className="group flex items-center gap-4 rounded-lg p-2 -mx-2 hover:bg-white/5 transition-all duration-200"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/5 text-muted-foreground group-hover:bg-active/20 group-hover:text-active transition-colors">
+                      <Phone className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Telephone</p>
+                      <p className="text-sm font-medium text-white group-hover:text-active transition-colors">{company.tel}</p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href={`tel:${company.mobile.replace(/\s/g, "")}`} 
+                    className="group flex items-center gap-4 rounded-lg p-2 -mx-2 hover:bg-white/5 transition-all duration-200"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/5 text-muted-foreground group-hover:bg-active/20 group-hover:text-active transition-colors">
+                      <Smartphone className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Mobile</p>
+                      <p className="text-sm font-medium text-white group-hover:text-active transition-colors">{company.mobile}</p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href={`mailto:${company.email}`} 
+                    className="group flex items-center gap-4 rounded-lg p-2 -mx-2 hover:bg-white/5 transition-all duration-200"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/5 text-muted-foreground group-hover:bg-active/20 group-hover:text-active transition-colors">
+                      <Mail className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Email</p>
+                      <p className="text-sm font-medium text-white group-hover:text-active transition-colors">{company.email}</p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href={`https://${company.web}`} 
+                    className="group flex items-center gap-4 rounded-lg p-2 -mx-2 hover:bg-white/5 transition-all duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white/5 text-muted-foreground group-hover:bg-active/20 group-hover:text-active transition-colors">
+                      <Globe className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Website</p>
+                      <p className="text-sm font-medium text-white group-hover:text-active transition-colors">{company.web}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </Reveal>
 
