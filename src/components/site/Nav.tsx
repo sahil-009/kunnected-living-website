@@ -118,7 +118,7 @@ export function Nav() {
                   </p>
                   <p className="mt-4 text-base leading-relaxed text-white/75">
                     One helpdesk, one escalation path, one accountable team across the entire
-                    campus estate.
+                    student accommodation estate.
                   </p>
                   <a
                     href="#process"

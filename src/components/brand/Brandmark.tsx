@@ -12,9 +12,7 @@ export function Brandmark({
   className?: string;
   tone?: "core" | "invert";
 }) {
-  return (
-    <ArcMark className={className} tone={tone} />
-  );
+  return <ArcMark className={className} tone={tone} />;
 }
 
 /** The KUnnect icon geometry: interlocking arcs = connection, flow, integrated systems. */

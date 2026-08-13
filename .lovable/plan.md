@@ -3,9 +3,11 @@
 Building the foundation: a full brand-accurate design system, the complete navigation and footer chrome, and the entire homepage story. Later phases roll that language across the remaining pages.
 
 ### One stack correction up front
+
 The brief asks for Next.js App Router. This project runs **TanStack Start** (React 19 + Vite + file-based routing + SSR + server functions) — the same capability set (server rendering, route-level SEO, data loading), different framework. Everything else in the technical brief holds exactly: TypeScript, Tailwind, Motion (Framer Motion), Shadcn UI, React Hook Form, React Query, dark mode, AA accessibility, performance.
 
 ### Brand system (from BRAND_BOOK_KUFM.pdf)
+
 Extracted and locked as design tokens:
 
 ```text
@@ -25,12 +27,15 @@ Layout is built on the brand book's **8×8 grid** with its margin and segment ru
 The **KUnnect icon geometry** (interlocking arcs) becomes an SVG pattern system used as hero background motion, section dividers, and quiet texture — matching Pattern 1 and Pattern 2 in the brand book.
 
 ### Brand positioning baked into copy
+
 Drawn from the brand book and LinkedIn brief: purpose "Connected Campus Excellence"; values Reliable / Efficient / Connected / Proactive; foundations Seamless Operations, Intelligent Management, Student-centric Experience, Culture of Responsiveness; tagline "To manage student living with professionalism and heart." Audience: universities and university students. Services: HVAC, cleaning, buildings maintenance, electrical, project management, preventive maintenance, asset & lifecycle tracking, fire safety.
 
 ### Navigation
+
 Transparent over the hero, solidifying to white on scroll with a hairline rule. Sticky. Services mega-menu with a two-column split (service list + a featured operational panel), animated open/close. Search affordance, "Request Consultation" CTA. Full-screen mobile navigation with staggered link reveal.
 
 ### Homepage — 14 sections, each a distinct composition
+
 No two sections share a layout.
 
 1. **Immersive hero** — full-viewport cinematic campus photography, slow parallax drift, arc-geometry overlay, multi-line headline with per-line masked reveal, glass CTA pair.
@@ -49,18 +54,23 @@ No two sections share a layout.
 14. **Premium footer** — large brandmark, four nav columns, newsletter, social, legal, Abu Dhabi office details from the letterhead.
 
 ### Imagery
+
 Bespoke AI-generated architectural photography, colour-graded to the brand palette: university campus exteriors, modern student accommodation interiors, plant rooms, HVAC risers, electrical distribution boards, engineers on site, a 24/7 operations control room, night-time facade. Roughly 10–12 images for Phase 1, generated at the right aspect ratios and served through CDN asset pointers so the repo stays light. No stock handshakes.
 
 ### Logo
+
 You're uploading the artwork. Until it lands I'll wire a typographic "KUnnected FM" lockup in Core Blue behind a single `<Brandmark />` component and a favicon slot — when you send the SVG/PNG files it's a one-component swap, respecting the brand book's clearspace and 180px minimum digital size.
 
 ### Contact details used site-wide
+
 Sas Al Nakhl Campus, Abu Dhabi, UAE · T +971 2 312 3333 · M +971 2 401 8000 · info@kunnectedfm.ae · www.kunnectedfm.ae
 
 ### Motion
+
 Motion for React throughout: masked text reveals, fade-up on intersection, image parallax, hover elevation, magnetic CTA cursor, page transitions, Lenis-style smooth scroll. Everything restrained, everything respecting `prefers-reduced-motion`.
 
 ### Technical detail
+
 - Reusable component library under `src/components/` — `Brandmark`, `Nav`, `MegaMenu`, `Section`, `Reveal`, `Parallax`, `ServiceCard`, `MetricCounter`, `EditorialSplit`, `ImageBand`, `Testimonial`, `NewsCard`, `CTABand`, `Footer`.
 - Tokens defined in `src/styles.css` under `@theme inline` (Tailwind v4 CSS-first) with light and dark values; no `tailwind.config.js`.
 - Route-level SEO via `head()` on `src/routes/index.tsx` — unique title, description, og/twitter tags, Organization + LocalBusiness JSON-LD.
@@ -68,4 +78,5 @@ Motion for React throughout: masked text reveals, fade-up on intersection, image
 - Lazy-loaded below-fold imagery, responsive `srcset`, no layout shift.
 
 ### Later phases
+
 Phase 2: About, Services hub + the 11 service sub-pages, Industries. Phase 3: Our Process, Why Kunnected FM (interactive comparison), Sustainability, News & Insights. Phase 4: Careers, Contact (map + React Hook Form), 404, Privacy, Terms — plus a backend decision for the contact form and newsletter, which will need Lovable Cloud to actually store or send submissions.

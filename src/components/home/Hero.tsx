@@ -41,7 +41,7 @@ export function Hero() {
         <h1 className="display-xl mt-6 max-w-[16ch] text-white">
           <LineReveal
             delay={0.25}
-            lines={["Smarter Campus", "Operations"]}
+            lines={["Smarter Student", "Accommodation", "Operations"]}
             lineClassName="text-white font-extrabold"
           />
         </h1>
@@ -103,10 +103,12 @@ export function ClientLogos() {
       <div className="shell flex flex-col gap-8 md:flex-row md:items-center md:justify-between relative z-10">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#3F80CF]">
-            Campus Operations &amp; Trust
+            Student Accommodation Operations &amp; Trust
           </p>
           <div className="mt-2 flex items-center gap-1 text-amber-400">
-            <span className="text-xs font-bold text-white/90 mr-2">5.0 Star Rated Facilities Management</span>
+            <span className="text-xs font-bold text-white/90 mr-2">
+              5.0 Star Rated Facilities Management
+            </span>
             <Star className="h-3.5 w-3.5 fill-current" />
             <Star className="h-3.5 w-3.5 fill-current" />
             <Star className="h-3.5 w-3.5 fill-current" />
@@ -120,18 +122,14 @@ export function ClientLogos() {
             <span className="font-display text-sm font-black tracking-widest text-white">
               KHALIFA
             </span>
-            <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">
-              UNIVERSITY
-            </span>
+            <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">UNIVERSITY</span>
           </div>
           <div className="h-8 w-px bg-white/10 hidden md:block" />
           <div className="flex flex-col">
             <span className="font-display text-sm font-black tracking-widest text-white">
               KU RESIDENCES
             </span>
-            <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">
-              PORTFOLIO
-            </span>
+            <span className="text-[9px] font-bold tracking-[0.25em] text-white/40">PORTFOLIO</span>
           </div>
         </div>
       </div>

@@ -43,7 +43,9 @@ export function WhoWeAre() {
 
         <div>
           <Reveal>
-            <h2 className="display-lg text-white">We don&apos;t just maintain facilities. We enable experiences.</h2>
+            <h2 className="display-lg text-white">
+              We don&apos;t just maintain facilities. We enable experiences.
+            </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="lede mt-8 max-w-2xl">{company.purposeBody}</p>
@@ -83,8 +85,14 @@ export function WhoWeAre() {
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2">
             {foundations.map((f, i) => (
-              <Reveal key={f.n} delay={0.06 * i} className="bg-surface p-8 rounded-lg border border-hairline gold-glow">
-                <span className="font-display text-sm font-semibold tracking-[0.18em] text-active">{f.n}</span>
+              <Reveal
+                key={f.n}
+                delay={0.06 * i}
+                className="bg-surface p-8 rounded-lg border border-hairline gold-glow"
+              >
+                <span className="font-display text-sm font-semibold tracking-[0.18em] text-active">
+                  {f.n}
+                </span>
                 <h3 className="mt-4 text-xl font-bold text-white">{f.title}</h3>
                 <p className="body-secondary mt-3">{f.body}</p>
               </Reveal>
@@ -105,7 +113,7 @@ export function WhyChooseUs() {
 
       <div className="shell relative z-10 py-24 lg:py-32">
         <Reveal>
-          <p className="eyebrow text-slate-500">Why Choose Kunnected FM</p>
+          <p className="eyebrow text-slate-500">Our Standards & Commitment</p>
           <SectionUnderline />
         </Reveal>
         <Reveal delay={0.08}>

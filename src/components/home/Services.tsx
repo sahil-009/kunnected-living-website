@@ -38,10 +38,10 @@ const categories = [
 
 const serviceCategories: Record<string, "hard" | "soft" | "mgmt"> = {
   "facility-management": "mgmt",
-  "cleaning": "soft",
-  "hvac": "hard",
-  "electrical": "hard",
-  "mechanical": "hard",
+  cleaning: "soft",
+  hvac: "hard",
+  electrical: "hard",
+  mechanical: "hard",
   "fire-safety": "hard",
   "preventive-maintenance": "mgmt",
   "asset-management": "mgmt",
@@ -69,15 +69,14 @@ export function Services() {
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <Reveal delay={0.06}>
             <h2 className="display-lg max-w-[20ch] text-white">
-              Complete integrated facilities management for campus estates
+              Complete integrated facilities management for Khalifa University Student Accommodation
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="body-secondary max-w-md">
-              We deliver complete facilities management solutions for Khalifa University and its student
-              accommodation. Our team combines reliability, functionality, and quality
-              craftsmanship to create environments that are safe, practical, and tailored to
-              campus life.
+              We deliver complete facilities management solutions for Khalifa University student
+              accommodation. Our team combines reliability, functionality, and quality craftsmanship
+              to create environments that are safe, practical, and tailored to student living.
             </p>
           </Reveal>
         </div>
@@ -104,10 +103,7 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <motion.ul
-          layout
-          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <motion.ul layout className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {filteredServices.map((s, i) => (
               <motion.li
@@ -158,7 +154,10 @@ export function Services() {
 
 export function Industries() {
   return (
-    <section id="industries" className="relative overflow-hidden border-t border-hairline bg-[#0a0a0d]">
+    <section
+      id="industries"
+      className="relative overflow-hidden border-t border-hairline bg-[#0a0a0d]"
+    >
       <img
         src={engineerAsset}
         alt=""
@@ -170,19 +169,21 @@ export function Industries() {
       />
       <div className="shell relative py-24 lg:py-32">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">Areas of Campus Operations</p>
+          <p className="eyebrow text-muted-foreground">Areas of Accommodation Operations</p>
           <span className="section-underline mt-5 block" />
         </Reveal>
         <Reveal delay={0.08}>
           <h2 className="display-md mt-8 max-w-[20ch] text-white">
-            Built for Khalifa University and the students who live here
+            Dedicated to Khalifa University Student Accommodation and the students who live here
           </h2>
         </Reveal>
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {industries.map((ind, i) => (
             <Reveal key={ind.title} delay={0.06 * i}>
               <div className="h-full bg-[#121217] p-8 lg:p-10 border border-hairline gold-glow rounded-lg">
-                <h3 className="text-xl font-bold leading-tight text-white lg:text-2xl">{ind.title}</h3>
+                <h3 className="text-xl font-bold leading-tight text-white lg:text-2xl">
+                  {ind.title}
+                </h3>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">{ind.body}</p>
               </div>
             </Reveal>

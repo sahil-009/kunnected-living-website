@@ -21,7 +21,9 @@ export function Faq() {
           <SectionUnderline />
         </Reveal>
         <Reveal delay={0.08}>
-          <h2 className="display-lg mt-8 max-w-[18ch] text-[#201A57]">Common questions about our services</h2>
+          <h2 className="display-lg mt-8 max-w-[18ch] text-[#201A57]">
+            Common questions about our services
+          </h2>
         </Reveal>
         <Reveal delay={0.12}>
           <p className="lede mt-6 max-w-2xl text-slate-700">
@@ -33,7 +35,11 @@ export function Faq() {
         <Reveal delay={0.16} className="mt-14 max-w-3xl">
           <Accordion type="single" collapsible className="w-full">
             {faq.map((item, i) => (
-              <AccordionItem key={item.question} value={`item-${i}`} className="border-slate-200/80">
+              <AccordionItem
+                key={item.question}
+                value={`item-${i}`}
+                className="border-slate-200/80"
+              >
                 <AccordionTrigger className="py-5 text-left text-base font-bold text-[#201A57] hover:text-active hover:no-underline lg:text-lg transition-colors">
                   {item.question}
                 </AccordionTrigger>

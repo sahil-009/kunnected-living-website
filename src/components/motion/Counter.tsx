@@ -40,7 +40,7 @@ export function Counter({
   return (
     <span ref={ref} className="tabular-nums">
       {prefix}
-      {value.toFixed(decimals)}
+      {decimals > 0 ? value.toFixed(decimals) : Math.round(value).toLocaleString()}
       {suffix}
     </span>
   );

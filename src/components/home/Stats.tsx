@@ -12,7 +12,11 @@ export function Stats() {
 
       <div className="shell relative z-10 py-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((s, i) => (
-          <Reveal key={s.label} delay={0.06 * i} className="bg-white/70 backdrop-blur-md rounded-xl p-8 border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+          <Reveal
+            key={s.label}
+            delay={0.06 * i}
+            className="bg-white/70 backdrop-blur-md rounded-xl p-8 border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+          >
             <p className="font-display text-5xl leading-none font-bold tracking-[-0.04em] text-active lg:text-6xl">
               <Counter to={s.value} suffix={s.suffix} />
             </p>

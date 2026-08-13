@@ -68,80 +68,80 @@
   --radius: 0.375rem;
 
   /* Brand constants - Locked to BRAND_BOOK_KUFM.pdf */
-  --core: #201A57;       /* Core Blue */
+  --core: #201a57; /* Core Blue */
   --core-foreground: #ffffff;
-  --active: #3F80CF;     /* Active Blue */
+  --active: #3f80cf; /* Active Blue */
   --active-foreground: #ffffff;
 
-  --background: #201A57; /* Core Blue Background */
+  --background: #201a57; /* Core Blue Background */
   --foreground: #ffffff; /* Bright White */
-  --surface: #14103b;    /* Deeper Core Blue shade for card surface */
+  --surface: #14103b; /* Deeper Core Blue shade for card surface */
   --hairline: rgba(63, 128, 207, 0.22); /* Thin active blue border */
 
   --card: #14103b;
   --card-foreground: #ffffff;
   --popover: #14103b;
   --popover-foreground: #ffffff;
-  --primary: #3F80CF;
+  --primary: #3f80cf;
   --primary-foreground: #ffffff;
   --secondary: #1a154c;
   --secondary-foreground: #ffffff;
   --muted: #1a154c;
   --muted-foreground: #a6adce;
-  --accent: #3F80CF;
+  --accent: #3f80cf;
   --accent-foreground: #ffffff;
   --destructive: #a6adce;
   --destructive-foreground: #ffffff;
   --border: rgba(63, 128, 207, 0.22);
   --input: rgba(63, 128, 207, 0.3);
-  --ring: #3F80CF;
+  --ring: #3f80cf;
   --sidebar: #14103b;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #3F80CF;
+  --sidebar-primary: #3f80cf;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #1a154c;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(63, 128, 207, 0.22);
-  --sidebar-ring: #3F80CF;
+  --sidebar-ring: #3f80cf;
 }
 
 .dark {
   /* Mirror parameters to prevent flashes */
-  --background: #201A57;
+  --background: #201a57;
   --foreground: #ffffff;
   --surface: #14103b;
   --hairline: rgba(63, 128, 207, 0.22);
 
-  --core: #201A57;
+  --core: #201a57;
   --core-foreground: #ffffff;
-  --active: #3F80CF;
+  --active: #3f80cf;
   --active-foreground: #ffffff;
 
   --card: #14103b;
   --card-foreground: #ffffff;
   --popover: #14103b;
   --popover-foreground: #ffffff;
-  --primary: #3F80CF;
+  --primary: #3f80cf;
   --primary-foreground: #ffffff;
   --secondary: #1a154c;
   --secondary-foreground: #ffffff;
   --muted: #1a154c;
   --muted-foreground: #a6adce;
-  --accent: #3F80CF;
+  --accent: #3f80cf;
   --accent-foreground: #ffffff;
   --destructive: #a6adce;
   --destructive-foreground: #ffffff;
   --border: rgba(63, 128, 207, 0.22);
   --input: rgba(63, 128, 207, 0.3);
-  --ring: #3F80CF;
+  --ring: #3f80cf;
   --sidebar: #14103b;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #3F80CF;
+  --sidebar-primary: #3f80cf;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #1a154c;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(63, 128, 207, 0.22);
-  --sidebar-ring: #3F80CF;
+  --sidebar-ring: #3f80cf;
 }
 
 @layer base {
@@ -315,7 +315,8 @@
 }
 
 @keyframes gradient-xy {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -324,15 +325,27 @@
 }
 
 @keyframes float-1 {
-  0% { transform: translate(0px, 0px) scale(1); }
-  50% { transform: translate(60px, 40px) scale(1.15); }
-  100% { transform: translate(-30px, 90px) scale(0.95); }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(60px, 40px) scale(1.15);
+  }
+  100% {
+    transform: translate(-30px, 90px) scale(0.95);
+  }
 }
 
 @keyframes float-2 {
-  0% { transform: translate(0px, 0px) scale(1.05); }
-  50% { transform: translate(-70px, -30px) scale(0.9); }
-  100% { transform: translate(50px, 70px) scale(1.1); }
+  0% {
+    transform: translate(0px, 0px) scale(1.05);
+  }
+  50% {
+    transform: translate(-70px, -30px) scale(0.9);
+  }
+  100% {
+    transform: translate(50px, 70px) scale(1.1);
+  }
 }
 
 @utility bg-light-mesh {
@@ -362,4 +375,3 @@
   filter: blur(110px);
   animation: float-2 22s infinite alternate;
 }
-

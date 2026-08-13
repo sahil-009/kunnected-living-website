@@ -5,13 +5,12 @@ import { Hero, ClientLogos } from "@/components/home/Hero";
 import { WhoWeAre, WhyChooseUs } from "@/components/home/WhoWeAre";
 import { Services, Industries } from "@/components/home/Services";
 import { Stats } from "@/components/home/Stats";
-import { Methodology } from "@/components/home/Methodology";
 import { CaseStudy, CtaBand } from "@/components/home/Sections";
 import { company } from "@/lib/site";
 
-const title = "Kunnected FM — Khalifa University Campus Operations, Abu Dhabi";
+const title = "Kunnected FM — Khalifa University Student Accommodation Operations, Abu Dhabi";
 const description =
-  "Dedicated student-facing facilities management for Khalifa University student accommodation: HVAC, cleaning, electrical, fire safety and 24/7 maintenance across the campus estate in Abu Dhabi.";
+  "Dedicated student-facing facilities management for Khalifa University student accommodation: HVAC, cleaning, electrical, fire safety and 24/7 maintenance in Abu Dhabi.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,7 +59,6 @@ function Index() {
         <WhoWeAre />
         <Stats />
         <Services />
-        <Methodology />
         <WhyChooseUs />
         <CaseStudy />
         <Industries />

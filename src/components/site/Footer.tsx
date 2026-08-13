@@ -22,7 +22,10 @@ export function Footer() {
             <ul className="mt-5 space-y-2.5">
               {navigation.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-base text-muted-foreground hover:text-active transition-colors">
+                  <a
+                    href={l.href}
+                    className="text-base text-muted-foreground hover:text-active transition-colors"
+                  >
                     {l.label}
                   </a>
                 </li>
@@ -35,7 +38,10 @@ export function Footer() {
             <ul className="mt-5 space-y-2.5">
               {services.slice(0, 6).map((s) => (
                 <li key={s.slug}>
-                  <a href="#services" className="text-base text-muted-foreground hover:text-active transition-colors">
+                  <a
+                    href="#services"
+                    className="text-base text-muted-foreground hover:text-active transition-colors"
+                  >
                     {s.title}
                   </a>
                 </li>
@@ -52,12 +58,18 @@ export function Footer() {
                 {company.address.line2}
               </p>
               <p>
-                <a href={`tel:${company.tel.replace(/\s/g, "")}`} className="hover:text-active transition-colors">
+                <a
+                  href={`tel:${company.tel.replace(/\s/g, "")}`}
+                  className="hover:text-active transition-colors"
+                >
                   T {company.tel}
                 </a>
               </p>
               <p>
-                <a href={`tel:${company.mobile.replace(/\s/g, "")}`} className="hover:text-active transition-colors">
+                <a
+                  href={`tel:${company.mobile.replace(/\s/g, "")}`}
+                  className="hover:text-active transition-colors"
+                >
                   M {company.mobile}
                 </a>
               </p>
@@ -82,7 +94,8 @@ export function Footer() {
           <div>
             <p className="eyebrow text-muted-foreground">Connect</p>
             <p className="body-secondary mt-5">
-              Follow Kunnected FM for campus operations updates and industry insights.
+              Follow Kunnected FM for student accommodation operations updates and industry
+              insights.
             </p>
             <a
               href="https://www.linkedin.com"

@@ -12,37 +12,37 @@ The final result should look like it was designed by a top creative agency for a
 
 Think of the quality and craftsmanship found on websites like:
 
- Apple
+Apple
 
- Stripe
+Stripe
 
- Linear
+Linear
 
- Notion
+Notion
 
- CBRE
+CBRE
 
- JLL
+JLL
 
- Siemens Smart Infrastructure
+Siemens Smart Infrastructure
 
- Foster + Partners
+Foster + Partners
 
 Every section should feel custom-designed with unique layouts, premium typography, meaningful whitespace, refined animations, and excellent visual hierarchy.
 
 The website should immediately communicate:
 
- Trust
+Trust
 
- Professionalism
+Professionalism
 
- Precision
+Precision
 
- Operational Excellence
+Operational Excellence
 
- Innovation
+Innovation
 
- Student-first Facilities Management
+Student-first Facilities Management
 
 The overall experience should make visitors feel they are interacting with a company that manages world-class educational campuses. This positioning aligns with the company's purpose of creating connected, seamless campus environments and enabling better student experiences.
 
@@ -475,7 +475,6 @@ Accessibility AA
 Performance optimized
 
 Lighthouse score above 95
-
 
 ## Development
 

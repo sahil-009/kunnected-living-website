@@ -26,8 +26,8 @@ export function Excellence() {
           </Reveal>
           <Reveal delay={0.14}>
             <p className="mt-8 max-w-lg text-base leading-relaxed text-white/65">
-              Data, technology and integrated platforms monitor, optimise and improve
-              performance across campus infrastructure — from chiller efficiency to a single
+              Data, technology and integrated platforms monitor, optimise and improve performance
+              across student accommodation infrastructure — from chiller efficiency to a single
               flickering corridor light.
             </p>
           </Reveal>
@@ -86,7 +86,7 @@ export function CampusExperience() {
 
         <div className="lg:col-span-4 lg:col-start-9 lg:self-center">
           <Reveal>
-            <p className="eyebrow text-muted-foreground">Campus experience</p>
+            <p className="eyebrow text-muted-foreground">Student Experience</p>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="display-md mt-7 text-core">
@@ -95,9 +95,9 @@ export function CampusExperience() {
           </Reveal>
           <Reveal delay={0.14}>
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground lg:text-base">
-              Hot water at 6am. A cool lecture theatre in August. A lift that never traps
-              anyone. Every decision is shaped around the people who use the campus — students
-              first, then faculty and staff.
+              Hot water at 6am. A cool lecture theatre in August. A lift that never traps anyone.
+              Every decision is shaped around the student residents — ensuring comfort, safety, and
+              a supportive living environment.
             </p>
           </Reveal>
         </div>

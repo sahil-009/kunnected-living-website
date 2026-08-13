@@ -5,12 +5,12 @@ export const company = {
     "To manage student living at Khalifa University with professionalism and heart, ensuring comfort, safety, and peace of mind every day.",
   purpose: "Exclusively Serving Khalifa University",
   purposeBody:
-    "We operate with a clear purpose — to ensure every space across campus functions seamlessly, efficiently, and reliably. We don't just maintain facilities; we enable experiences.",
+    "We operate with a clear purpose — to ensure every space across student accommodation functions seamlessly, efficiently, and reliably. We don't just maintain facilities; we enable experiences.",
   purposeExtended:
     "Through integrated systems, proactive management, and continuous improvement, we create an environment where people can focus, perform, and thrive.",
   headline: "Smarter Campus Operations",
   subheadline:
-    "Integrated systems for efficient, reliable, and connected facility management across the Khalifa University campus estate.",
+    "Integrated systems for efficient, reliable, and connected facility management across Khalifa University Student Accommodation.",
   usp: "Student-facing facilities management with 24/7 maintenance, keeping student satisfaction high and parent complaints minimal across Khalifa University residences.",
   address: {
     line1: "Sas Al Nakhl Campus",
@@ -20,13 +20,13 @@ export const company = {
   mobile: "+971 2 401 8000",
   email: "info@kunnectedfm.ae",
   web: "www.kunnectedfm.ae",
-  hours: "Sunday – Thursday, 08:00 – 18:00 · Emergency cover 24/7",
+  hours: "Monday – Friday, 08:00 – 17:00 · Emergency cover 24/7",
 };
 
 export const vision = [
   "Reliable systems that never miss a beat",
   "Efficient operations across every building",
-  "Connected campus infrastructure",
+  "Connected student accommodation infrastructure",
   "Proactive maintenance before issues arise",
 ] as const;
 
@@ -48,17 +48,17 @@ export const foundations = [
   {
     n: "02",
     title: "Intelligent Management",
-    body: "We use data, technology, and integrated platforms to monitor, optimize, and improve performance across campus infrastructure.",
+    body: "We use data, technology, and integrated platforms to monitor, optimize, and improve performance across student accommodation infrastructure.",
   },
   {
     n: "03",
     title: "Student-centric Experience",
-    body: "Every decision is shaped around the people who use the campus — creating safe, comfortable, and efficient environments for students, faculty, and staff.",
+    body: "Every decision is shaped around the student residents — creating safe, comfortable, and efficient environments.",
   },
   {
     n: "04",
     title: "Culture of Responsiveness",
-    body: "We act before issues arise and respond quickly when they do — ensuring a campus that is always supported and always operational.",
+    body: "We act before issues arise and respond quickly when they do — ensuring student accommodation that is always supported and always operational.",
   },
 ] as const;
 
@@ -81,7 +81,7 @@ export const keyStrengths = [
   },
   {
     title: "Sustainability and innovation",
-    body: "Implementing green cleaning practices, energy-saving HVAC regimes, and smart monitoring technology to reduce campus footprint.",
+    body: "Implementing green cleaning practices, energy-saving HVAC regimes, and smart monitoring technology to reduce environmental footprint.",
   },
 ] as const;
 
@@ -104,7 +104,7 @@ export const flagshipServices = [
 ] as const;
 
 export const stats = [
-  { value: 3260, suffix: "", label: "Student beds across the estate" },
+  { value: 3260, suffix: "", label: "Student beds across the accommodation estate" },
   { value: 8, suffix: "", label: "Buildings under management" },
   { value: 24, suffix: "/7", label: "Helpdesk and emergency cover" },
   { value: 11, suffix: "", label: "Integrated service lines" },
@@ -115,7 +115,7 @@ export const services = [
     slug: "facility-management",
     title: "Facility Operations",
     summary:
-      "Total oversight of every building system, contract, and service line across the campus estate.",
+      "Total oversight of every building system, contract, and service line across student accommodation.",
     imageKey: "control-room" as const,
   },
   {
@@ -135,8 +135,7 @@ export const services = [
   {
     slug: "electrical",
     title: "Electrical Services",
-    summary:
-      "Fittings, fixtures, distribution, and testing regimes kept continuously compliant.",
+    summary: "Fittings, fixtures, distribution, and testing regimes kept continuously compliant.",
     imageKey: "electrical" as const,
   },
   {
@@ -160,7 +159,7 @@ export const services = [
   {
     slug: "asset-management",
     title: "Asset Management",
-    summary: "Registers, condition data, and lifecycle tracking across the whole estate.",
+    summary: "Registers, condition data, and lifecycle tracking across student accommodation.",
     imageKey: "asset-management" as const,
   },
   {
@@ -172,7 +171,7 @@ export const services = [
   {
     slug: "operations-management",
     title: "Operations Management",
-    summary: "Helpdesk, mobilisation, reporting, and the daily rhythm of a running campus.",
+    summary: "Helpdesk, mobilisation, reporting, and the daily rhythm of student accommodation.",
     imageKey: "operations-management" as const,
   },
   {
@@ -209,8 +208,9 @@ export const methodology = [
 export const project = {
   title: "Khalifa University Student Accommodation",
   subtitle: "3,260 beds · 8 buildings · Main Campus & Sas Al Nakhl",
-  body: "Khalifa University Student Accommodation forms a key part of the university's strategic growth plan, aiming to deliver world-class living facilities for students across both the Main Campus and Sas Al Nakhl (SAN) Campus. With a total capacity of 3,260 beds across eight buildings, the development is designed to foster a vibrant campus life while supporting academic and doctoral pursuits.",
-  scope: "KUFM's scope includes a full range of services such as management operations, QHSE compliance, helpdesk services, soft services (cleaning, pest control, waste management, laundry, landscaping, and security), and hard services (HVAC, plumbing, elevators, and electrical systems). It also covers energy management and lifecycle maintenance. In addition, KUFM provides value-added services including transportation (shuttle) and concierge services, plus Student Welfare Services including room allocation, student induction, key management, and code of conduct monitoring.",
+  body: "Khalifa University Student Accommodation forms a key part of the university's strategic growth plan, aiming to deliver world-class living facilities for students across both the Main Campus and Sas Al Nakhl (SAN) Campus. With a total capacity of 3,260 beds across eight buildings, the development is designed to foster a vibrant residential life while supporting academic and doctoral pursuits.",
+  scope:
+    "KUFM's scope includes a full range of services such as management operations, QHSE compliance, helpdesk services, soft services (cleaning, pest control, waste management, laundry, landscaping, and security), and hard services (HVAC, plumbing, elevators, and electrical systems). It also covers energy management and lifecycle maintenance. In addition, KUFM provides value-added services including transportation (shuttle) and concierge services, plus Student Welfare Services including room allocation, student induction, key management, and code of conduct monitoring.",
 } as const;
 
 export const projectScope = {
@@ -220,7 +220,7 @@ export const projectScope = {
     "Plumbing & Pumps Infrastructure",
     "Elevator & Mechanical Lift Systems",
     "Energy Management & Audits",
-    "Lifecycle Asset Maintenance"
+    "Lifecycle Asset Maintenance",
   ],
   softServices: [
     "Facility Cleaning & Housekeeping Programs",
@@ -228,26 +228,26 @@ export const projectScope = {
     "Waste Management & Recycling Systems",
     "Laundry Service Operations",
     "Landscaping & Grounds Keeping",
-    "Security & Guarding Services"
+    "Security & Guarding Services",
   ],
   valueAdded: [
     "Student Transportation & Shuttle Services",
     "Concierge & Front Desk Operations",
-    "Turnaround Residence Cleaning"
+    "Turnaround Residence Cleaning",
   ],
   studentWelfare: [
     "Room Allocation & Induction Programs",
     "Key Management & Security Tokens",
     "Welfare Code of Conduct Monitoring",
-    "Student Community Liaison Support"
-  ]
+    "Student Community Liaison Support",
+  ],
 } as const;
 
 export const faq = [
   {
     question: "What services do you provide at Khalifa University?",
     answer:
-      "We offer complete facilities management solutions, including space planning, HVAC, cleaning, buildings maintenance, electrical fittings and fixtures, project management, preventive maintenance, asset and lifecycle tracking, fire safety systems, and student welfare services across Khalifa University campuses.",
+      "We offer complete facilities management solutions, including space planning, HVAC, cleaning, buildings maintenance, electrical fittings and fixtures, project management, preventive maintenance, asset and lifecycle tracking, fire safety systems, and student welfare services across Khalifa University student accommodation estates.",
   },
   {
     question: "Which Khalifa University campuses do you support?",
@@ -255,12 +255,12 @@ export const faq = [
       "We manage and support student accommodation estates across both the Main Campus and Sas Al Nakhl (SAN) Campus in Abu Dhabi.",
   },
   {
-    question: "How do you ensure the quality of work on campus?",
+    question: "How do you ensure the quality of work across the accommodation estates?",
     answer:
-      "We use premium-quality materials, skilled craftsmanship, and strict quality checks at every stage to deliver durable, compliant, and reliable campus operations.",
+      "We use premium-quality materials, skilled craftsmanship, and strict quality checks at every stage to deliver durable, compliant, and reliable student accommodation operations.",
   },
   {
-    question: "Are campus operations teams kept informed of progress?",
+    question: "Are student accommodation teams kept informed of progress?",
     answer:
       "Yes. We maintain complete transparency with Khalifa University's housing and estates teams, providing regular operational updates and compliance reporting.",
   },
@@ -275,17 +275,29 @@ export const faq = [
       "Our 24/7 helpdesk provides staffed emergency response specifically for Khalifa University residences, with defined escalation paths and rapid resolution commitments.",
   },
   {
-    question: "What makes Kunnected FM's campus operations unique?",
+    question: "What makes Kunnected FM's student accommodation operations unique?",
     answer:
       "Kunnected FM combines proactive facilities engineering, student welfare monitoring, and 24/7 responsiveness to transform student accommodation into comfortable, safe environments where students can thrive.",
   },
 ] as const;
 
 export const industries = [
-  { title: "Academic & Research", body: "Academic buildings, laboratories, libraries and lecture estates." },
-  { title: "Student Accommodation", body: "Residences where uptime is measured in comfort, not tickets." },
-  { title: "Campus Infrastructure", body: "Utilities, plant rooms, distribution and shared services." },
-  { title: "Sports & Amenity", body: "Gyms, dining halls and social spaces with heavy daily load." },
+  {
+    title: "Residential Units",
+    body: "Bedrooms, study rooms, and personal spaces designed for student comfort.",
+  },
+  {
+    title: "Common Areas",
+    body: "Lounges, recreation spaces, and shared amenities kept clean and welcoming.",
+  },
+  {
+    title: "Accommodation Utilities",
+    body: "HVAC, plumbing, lighting, and power infrastructure supporting all residences.",
+  },
+  {
+    title: "Student Welfare Services",
+    body: "Helpdesk, room allocations, key management, and 24/7 emergency support.",
+  },
 ] as const;
 
 export const navigation = [

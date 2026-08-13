@@ -35,10 +35,10 @@ export function Methodology() {
         </Reveal>
         <Reveal delay={0.12}>
           <p className="lede mt-6 max-w-3xl">
-            Creating a well-managed campus should be a structured and stress-free experience.
-            Our streamlined 4-step process ensures every detail is handled with care — from
-            understanding your operational vision to executing with precision and handing over
-            a campus ready for students.
+            Creating a well-managed campus should be a structured and stress-free experience. Our
+            streamlined 4-step process ensures every detail is handled with care — from
+            understanding your operational vision to executing with precision and handing over a
+            campus ready for students.
           </p>
         </Reveal>
 
@@ -58,7 +58,9 @@ export function Methodology() {
                     </span>
                     <Icon className="h-6 w-6 text-active transition-transform duration-500 group-hover:scale-110" />
                   </div>
-                  <h3 className="mt-6 text-xl font-bold leading-snug text-white transition-colors group-hover:text-active">{step.title}</h3>
+                  <h3 className="mt-6 text-xl font-bold leading-snug text-white transition-colors group-hover:text-active">
+                    {step.title}
+                  </h3>
                   <p className="body-secondary mt-4">{step.body}</p>
                 </motion.div>
               </Reveal>
