@@ -63,7 +63,7 @@ You're uploading the artwork. Until it lands I'll wire a typographic "KUnnected 
 
 ### Contact details used site-wide
 
-Sas Al Nakhl Campus, Abu Dhabi, UAE · T +971 2 312 3333 · M +971 2 401 8000 · info@kunnectedfm.ae · www.kunnectedfm.ae
+Sas Al Nakhl Campus, Abu Dhabi, UAE · T +971 2 312 3333 · M +971 2 401 8000 · info@kunnectedfm.com · www.kunnectedfm.com
 
 ### Motion
 

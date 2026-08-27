@@ -18,8 +18,8 @@ export const company = {
   },
   tel: "+971 2 312 3333",
   mobile: "+971 2 401 8000",
-  email: "info@kunnectedfm.ae",
-  web: "www.kunnectedfm.ae",
+  email: "info@kunnectedfm.com",
+  web: "www.kunnectedfm.com",
   hours: "Monday – Friday, 08:00 – 17:00 · Emergency cover 24/7",
 };
 
